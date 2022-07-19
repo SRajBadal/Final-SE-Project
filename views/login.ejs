@@ -1,0 +1,135 @@
+<!-- Custom styles for Index page -->
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<div class="container">
+    <!-- Table for dividing the screen to 3 parts so central part can be shown effectively -->
+    <table>
+        <td class="side"></td>
+        <td class="main card card-body loginAdjust">
+            <form class="form-signin" action="/users/login" method="POST">
+
+                <!-- Logo of Autism NS when clicked triggers the function gotoSite()-->
+                <img class="logo" src="/images/logo.jpg" onclick="gotoSite()">
+
+                <!-- Header of the page -->
+                <h1 class="h3 mb-3 font-weight-normal">Log In to your Account</h1>
+                <%- include('partials/messages'); %>
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-link btn-block" data-toggle="modal" data-target="#loginHelp">
+                    Click here for Help
+                </button>
+
+                <!-- sets the proper width and margin of the modal -->
+                <div id="loginHelp" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Login or Registration Help</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- modal body creation with image, help screen and buttons-->
+                            <div class="modal-body">
+                                <div class="myhelp">In order to log in to your account, follow the following steps:
+                                    <img src="./images/Login.gif" alt="Login.gif">
+                                    <ul>
+                                        <li>Type your email on the Email Tab</li>
+                                        <li>Type your password on the Password tab</li>
+                                        <li>Click Log In button for logging in to your account</li>
+                                    </ul>
+                                </div>
+
+                                <div class="myhelp">If you dont have an account yet, you will have to register an account. You can do so following these steps:
+                                    <img src="./images/register.gif" alt="register.gif">
+                                    <ul>
+                                        <li>Type your email on the Email Tab</li>
+                                        <li>Type your password on the Password tab</li>
+                                        <li>Click Register button for registering your account</li>
+                                    </ul>
+                                </div>
+
+                                <div class="myhelp">Tips for Email Address
+                                    <ul>
+                                        <li>Email address is in the format lastName.firstName@email.com</li>
+                                        <li>If your name is John Smith, your email address can be smith.john@email.com
+                                        </li>
+                                        <li>Don't forget the "@" sign.</li>
+                                        <li>Don't forget the email.com after "@" sign.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="myhelp">Tips for Password
+                                    <ul>
+                                        <li>Password can be anything that you can remember but others can't guess.</li>
+                                        <li>It can be letters, numbers or symbols.</li>
+                                        <li>Don't put common words or your name or your phone number as your password.
+                                        </li>
+                                        <li>Example: yXo8Q1#%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" onclick="showPrev()">Previous</button>
+                                <button type="button" class="btn btn-default" onclick="showNext()">Next</button>
+                            </div>
+
+                            <script>
+                                var visible = 0;
+
+                                function showDiv() {
+                                    $(".myhelp").hide();
+                                    $(".myhelp:eq(" + visible + ")").show();
+                                }
+                                showDiv();
+
+                                function showNext() {
+                                    if (visible == $(".myhelp").length - 1) {
+                                        visible = 0;
+                                    } else {
+                                        visible++;
+                                    }
+                                    showDiv();
+                                }
+
+                                function showPrev() {
+                                    if (visible == 0) {
+                                        visible = $(".myhelp").length - 1;
+                                    } else {
+                                        visible--;
+                                    }
+                                    showDiv();
+                                }
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Input field for Email address -->
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="lastname.firstname@autismns.ca" autofocus />
+
+                <!-- Input field for password -->
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Type Password here" autofocus />
+
+                <!-- Sign In button -->
+                <button class="btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+                <br>
+
+                <!-- Instructions for regestering account -->
+                <p> Don't have an account yet?<br> Click below to register</p>
+
+                <!-- Register button for Registration of account -->
+                <!-- <button class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#loginHelp" >Register</button> -->
+                <a type="submit" class="btn btn-lg btn-block btn-primary" href="/users/register">
+                    Register
+                    </button>
+            </form>
+        </td>
+        <td class="side"></td>
+
+    </table>
+</div>

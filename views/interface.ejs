@@ -1,0 +1,89 @@
+<!-- Link for custom css for interface.ejs -->
+<link rel="stylesheet" type="text/css" href="./css/interface.css">
+
+<!-- Code for NAVIGATION BAR -->
+<nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+
+    <!-- Code for Navbar Brand (Title) -->
+    <a class="navbar-brand"><span class="brand-edit">Autism NS Emails</span></a>
+
+    <!-- Right Side buttons of Navigation Bar: Includes Settings, Logout button -->
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <!-- Item for creating space between search bar and options -->
+        <span class="navbar-nav mr-auto"></span>
+
+        <!-- Creating the button for Settings -->
+        <div class="navbar-nav adjust">
+            <div class="nav-item active">
+                <a class="nav-link" href="#">Settings</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link active btn" href="/users/logout">
+                    <!-- <image class="logoutIcon" src="icons/logout.png">Logout</image> -->
+                    Logout
+                </a>
+                </button>
+            </div>
+            <!-- give the initial of the system user-->
+            <button class="btn bg-transparent nav-link active">
+                <span class="btn rounded-circle bg-light" id="initials">SB</span>
+            </button>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Codes for BODY STRUCTURE -->
+<!-- Table for division of elements on the body of the page -->
+<table class="table-responsive-lg">
+    <tr class="main-page">
+        <!-- First Column of the table -->
+        <td class="page-nav custom-control page-options">
+
+            <!-- Field in the first Column for placements of buttons -->
+            <div class="column-1" data-type="vertical">
+
+                <!-- Creation of Compose Button -->
+                <span class="compose-btn">
+                    <button class="btn btn-success" onclick="showCompose()">Compose</button>
+                </span>
+                <br><br>
+
+                <!-- Inbox Button: triggers showInbox() function -->
+                <div data-role="button" id="btnInbox" class="btn c1-btn current" onclick="show('Inbox')">Inbox</div>
+                <br><br>
+
+                <!-- Sent Items Button: Triggers showSent() function -->
+                <div data-role="button" class="btn c1-btn" onclick="show('Sent Items')">Sent Items</div>
+                <br><br>
+
+                <!-- Favourites Button: Triggers showFav() function -->
+                <div data-role="button" class="btn c1-btn" onclick="show('Favorites')">Favorites</div>
+                <br><br>
+
+                <!-- Drafts Button: Triggers showDrafts() function -->
+                <div data-role="button" class="btn c1-btn" onclick="show('Drafts')">Drafts</div>
+                <br><br>
+
+
+                <!-- Help Button - triggers showHelp() function when clicked -->
+                <a data-role="button" class="btn c1-btn" onclick="helpScreen()">Help</a>
+
+            </div>
+        </td>
+
+        <!-- Second Column of the Table -->
+        <td valign="top" class="column-2">
+            <div id="emailList"></div>
+            <!-- class="column-2-inner" -->
+        </td>
+
+        <!-- Column for creating space between column1 and column2 -->
+        <td class="spacing"> </td>
+
+        <!-- third column of the screen -->
+        <td class="column-3">
+            <div class="column-3-inner" id="composeScreen"></div>
+        </td>
+    </tr>
+</table>

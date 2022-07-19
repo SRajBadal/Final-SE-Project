@@ -1,0 +1,310 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding-top: 5rem;
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-size: 300%;
+}
+
+tr {
+    height: 30px;
+}
+
+.main {
+    height: 100%;
+}
+
+.navbar {
+    height: 50px;
+    box-shadow: 1px 1px 5px;
+}
+
+.navbar-brand {
+    font-size: 150%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Changes color of Navbar-Brand */
+
+.brand-edit {
+    color: whitesmoke;
+}
+
+.page-nav {
+    width: 200px;
+    height: 100%;
+    border-color: black;
+}
+
+
+/* General adjustment for center alignment */
+
+.adjust {
+    align-items: center;
+}
+
+.nav-item {
+    width: 80px;
+}
+
+
+/* properties of the objects of the main body */
+
+
+/* Properties of the first column of the body */
+
+
+/* Properties of Buttons on the first column */
+
+.c1-btn {
+    text-align: left;
+    padding-bottom: 10px;
+    width: 70%;
+}
+
+.c1-btn:hover {
+    background-color: #aaa;
+    padding-bottom: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.current {
+    background-color: #aaa;
+    box-decoration-break: slice;
+    width: 70%;
+    font-weight: bold;
+}
+
+.compose-btn {
+    text-align: center;
+}
+
+.inboxItems {
+    width: 30%;
+    height: 12cm;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    border-color: black;
+    box-shadow: 5px 5px 15px black;
+}
+
+.unread {
+    /* sets the font weight to bold */
+    font-weight: bold;
+}
+
+.highlight {
+    /* Sets the width to 90% if the available width */
+    width: 90%;
+    /* Sets the division in the same line as the neighbouring division with the same property */
+    display: inline-block;
+}
+
+
+/* Attributes when the cursor hovers above the elements with the class "highlight"*/
+
+.highlight:hover {
+    /* Sets the background-color to darkgray*/
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.spacing {
+    width: 1cm;
+}
+
+.column-1 {
+    height: 100%;
+}
+
+.column-2 {
+    width: 32%;
+    vertical-align: top;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    border-color: black;
+    box-shadow: 5px 5px 15px black;
+    overflow-y: scroll;
+}
+
+.column-2-inner {
+    max-height: 10cm;
+    overflow-y: scroll;
+}
+
+.c2Title {
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 0cm;
+    pointer-events: none;
+}
+
+.column-3 {
+    width: 50%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+    text-align: left;
+    padding-left: 10px;
+    vertical-align: top;
+    overflow-y: auto;
+}
+
+.column-3-inner {
+    overflow: scroll;
+}
+
+.message {
+    text-align: center;
+}
+
+.favicon {
+    width: 27px;
+    height: 25px;
+    padding: 5px 5px;
+    cursor: pointer;
+    display: inline;
+}
+
+.checked {
+    color: orangered;
+}
+
+.icon {
+    font-size: larger;
+    text-align: right;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.deletebtn {
+    /* sets the padding on all directions(top-bottom-right-left) to 3 px */
+    padding: 3px 3px;
+    /* Sets the cursor to pointer when hovered above the element */
+    cursor: pointer;
+    /* Sets the division in the same line as the neighbouring division with the same property*/
+    display: inline;
+    text-align: right;
+}
+
+
+/* Attributes when the cursor hovers above the elements with the class "deletebtn" */
+
+.deletebtn:hover {
+    /* Sets the backgroun-color to red */
+    background-color: red;
+}
+
+p {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding-bottom: 0;
+    margin: 0;
+    line-height: 10px;
+}
+
+.from {
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.subject {
+    font-size: smaller;
+}
+
+.listElement {
+    width: 97%;
+    margin-left: 10px;
+    /* height: 1cm; */
+}
+
+.listElement:hover {
+    margin-top: 2px;
+}
+
+.element {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 85%;
+}
+
+.element:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+}
+
+.selector {
+    width: 10px'
+
+}
+
+.selector:hover {
+    background-color: blue;
+}
+
+.helpStatement {
+    padding-left: 1.7cm;
+    /* font-weight: 500; */
+    height: 1cm;
+    align-content: center;
+    color: grey;
+}
+
+.emailText {
+    /* sets the width to 100% of available window space */
+    width: 100%;
+}
+
+.space {
+    /* sets the width to 1.6cm */
+    width: 2.1cm;
+    /* aligns the text to the right */
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+    /* adds 5px space to the right of the element */
+    padding-right: 5px;
+}
+
+.compose-screen {
+    width: 80%;
+    align-items: left;
+    vertical-align: top;
+}
+
+.btn-compose {
+    width: 2.5cm;
+}
+
+.lead {
+    margin-left: 0;
+}
+
+li {
+    padding-top: 15px;
+}
+
+.checkbox {
+    padding-right: 15px;
+}
