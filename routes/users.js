@@ -2,12 +2,12 @@
  * This javascript is responsible for registering, logging-in, logging-out the user,
  * along with sending and receiving of the emails in all the pages.
  * Group 5
- * Nabin Bhandari (A00430201)
- * Sudeep Raj Badal (A00431008)
- * Aditya Choudhary (A00424677)
- * Rajan Poudel (A00426234)
- * Samuel Richard (A00430643)
- * Dinesh Kumar (A00432295)
+ * Nabin Bhandari
+ * Sudeep Raj Badal
+ * Aditya Choudhary
+ * Rajan Poudel
+ * Samuel Richard
+ * Dinesh Kumar
  */
 
 //  Importing express.
